@@ -1,0 +1,24 @@
+<!doctype html>
+<meta charset="UTF-8">
+<title>mailto</title>
+<h2>No plugin</h2>
+<p>
+  <span>john.doe[at]domain[dot]com</span><br>
+  <span>john.doe/chez/domain{point}com</span><br>
+</p>
+<h2>With defaults</h2>
+<p>
+  <span class="foo">john.doe[at]domain[dot]com</span>
+</p>
+<h2>With custom paramters</h2>
+<p>
+  <span class="bar">john.doe/chez/domain{point}com</span><br>
+  <span class="bar">thmichel/chez/gmail{point}com</span>
+</p>
+<script src="js/mailto.min.js"></script>
+<script>
+  //document.querySelectorAll(".foo").mailto();
+  //document.querySelectorAll(".bar").mailto({at: "/chez/", dot: "{point}"});
+  Mailto(document.querySelector(".foo"));
+  Mailto(document.querySelectorAll(".bar"), {at: "/chez/", dot: "{point}"});
+</script>
